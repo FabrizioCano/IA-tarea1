@@ -61,7 +61,7 @@ time_ibfs=time()
 tablero_BFS=BFS(tablero_inicial,n)
 time_fbfs=time()-time_ibfs
 print("Tablero solucion de BFS: ")
-print_board(tablero_BFS[0][-1], n)  # Solo imprime el último estado
+print_board(tablero_BFS[0][-1], n)  
 
 print("Tiempo de Busqueda en Anchura: ",time_fbfs)
 print(f'Numero de nodos expandidos: {tablero_BFS[1]}')

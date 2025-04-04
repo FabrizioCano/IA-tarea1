@@ -83,8 +83,7 @@ class State:
                 temp[x], temp[x - self.n] = temp[x - self.n], temp[x]
             elif direction == 'Down':
                 temp[x], temp[x + self.n] = temp[x + self.n], temp[x]
-            
-            # 👇 También aquí falta el argumento `n`
+          
             children.append(State(temp, self, direction, self.depth + 1, 1, self.n)) 
         return children
 

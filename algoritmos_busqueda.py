@@ -1,10 +1,8 @@
 from state import State
 from queue import PriorityQueue
 from queue import Queue
-from queue import LifoQueue
 
-from state import State
-from queue import Queue
+
 
 def BFS(given_state, n):
     root = State(given_state, None, None, 0, 0, n)
