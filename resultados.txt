@@ -98,3 +98,76 @@ Tiempo de ejecucion: 0.584216 segundos
 Nodos expandidos: 122518
 Movimientos: ['Up', 'Up', 'Left', 'Down', 'Down', 'Right', 'Up', 'Right', 'Up', 'Left', 'Left', 'Down', 'Right', 'Right', 'Up', 'Left', 'Down', 'Right', 'Down', 'Left', 'Up', 'Right', 'Down']
 
+Estado inicial:
+[3, 1]
+[0, 2]
+
+=== A* con heuristica: Distancia de Manhattan ===
+Tiempo de ejecucion: 0.000000 segundos
+Nodos expandidos: 4
+Movimientos: ['Up', 'Right', 'Down']
+
+=== A* con heuristica: Piezas mal colocadas ===
+Tiempo de ejecucion: 0.000000 segundos
+Nodos expandidos: 4
+Movimientos: ['Up', 'Right', 'Down']
+
+=== Busqueda en Profundidad (DFS) ===
+Tiempo de ejecucion: 0.000000 segundos
+Nodos expandidos: 3
+Movimientos: ['Up', 'Right', 'Down']
+
+=== Busqueda en Anchura (BFS) ===
+Tiempo de ejecucion: 0.000000 segundos
+Nodos expandidos: 6
+Movimientos: ['Up', 'Right', 'Down']
+
+Estado inicial:
+[4, 1, 8]
+[2, 7, 5]
+[3, 0, 6]
+
+=== A* con heuristica: Distancia de Manhattan ===
+Tiempo de ejecucion: 0.009622 segundos
+Nodos expandidos: 556
+Movimientos: ['Up', 'Left', 'Down', 'Right', 'Up', 'Left', 'Up', 'Right', 'Down', 'Down', 'Right', 'Up', 'Up', 'Left', 'Down', 'Right', 'Down', 'Left', 'Up', 'Right', 'Down']
+
+=== A* con heuristica: Piezas mal colocadas ===
+Tiempo de ejecucion: 0.065418 segundos
+Nodos expandidos: 5602
+Movimientos: ['Up', 'Left', 'Down', 'Right', 'Up', 'Left', 'Up', 'Right', 'Down', 'Down', 'Right', 'Up', 'Up', 'Left', 'Down', 'Right', 'Down', 'Left', 'Up', 'Right', 'Down']
+
+=== Busqueda en Profundidad (DFS) ===
+Tiempo de ejecucion: 4.194511 segundos
+Nodos expandidos: 22941
+Movimientos: ['Up', 'Left', 'Up', 'Right', 'Down', 'Down', 'Left', 'Up', 'Up', 'Right', 'Down', 'Down', 'Right', 'Up', 'Left', 'Up', 'Right', 'Down', 'Down', 'Left', 'Up', 'Up', 'Left', 'Down', 'Down', 'Right', 'Up', 'Right', 'Down']
+
+=== Busqueda en Anchura (BFS) ===
+Tiempo de ejecucion: 0.250248 segundos
+Nodos expandidos: 61407
+Movimientos: ['Left', 'Up', 'Right', 'Down', 'Left', 'Up', 'Up', 'Right', 'Down', 'Down', 'Right', 'Up', 'Up', 'Left', 'Down', 'Right', 'Down', 'Left', 'Up', 'Right', 'Down']
+
+Estado inicial:
+[3, 1]
+[2, 0]
+
+=== A* con heuristica: Distancia de Manhattan ===
+Tiempo de ejecucion: 0.000000 segundos
+Nodos expandidos: 5
+Movimientos: ['Left', 'Up', 'Right', 'Down']
+
+=== A* con heuristica: Piezas mal colocadas ===
+Tiempo de ejecucion: 0.000000 segundos
+Nodos expandidos: 6
+Movimientos: ['Left', 'Up', 'Right', 'Down']
+
+=== Busqueda en Profundidad (DFS) ===
+Tiempo de ejecucion: 0.000000 segundos
+Nodos expandidos: 8
+Movimientos: ['Up', 'Left', 'Down', 'Right', 'Up', 'Left', 'Down', 'Right']
+
+=== Busqueda en Anchura (BFS) ===
+Tiempo de ejecucion: 0.000000 segundos
+Nodos expandidos: 7
+Movimientos: ['Left', 'Up', 'Right', 'Down']
+
