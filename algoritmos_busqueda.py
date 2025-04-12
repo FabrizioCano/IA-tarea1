@@ -6,7 +6,7 @@ from queue import Queue
 
 def BFS(given_state, n):
     #nodo inicial
-    root = State(given_state, None, None, 0, 0, n)
+    root = State(given_state, None, None, 0, 0)
     #verifica si el nodo inicial es la solucion
     if root.test():
         return root.solution()
@@ -14,55 +14,62 @@ def BFS(given_state, n):
     #inicializa la cola con el nodo inicial y una lista de nodos explorados vacia
     frontier = Queue()
     frontier.put(root)
-    explored = []
+    explored = set()
 
     #mientras la cola no este vacia, se extrae el nodo actual y se expande
     while not frontier.empty():
         current_node = frontier.get() 
-        explored.append(current_node.state) #se agrega el nodo actual a la lista de nodos explorados
-        children = current_node.expand() #se expanden los nodos hijos del nodo actual
+        explored.add(tuple(current_node.state)) #se agrega el nodo actual a la lista de nodos explorados
+        children = current_node.expand(n) #se expanden los nodos hijos del nodo actual
         for child in children: #se itera sobre los nodos hijos
-            if child.state not in explored: #si el nodo hijo no ha sido explorado
+            if tuple(child.state) not in explored: #si el nodo hijo no ha sido explorado
                 if child.test(): #verifica si el nodo hijo es la solucion
                     return child.solution(), len(explored) #si es la solucion, devuelve la secuencia de tableros y el numero de nodos explorados
                 frontier.put(child) #si no es la solucion, se agrega el nodo hijo a la cola de nodos por explorar
+                explored.add(tuple(child.state)) #se agrega el nodo hijo a la lista de nodos explorados
     
-    return None  #si no se encuentra la solucion, devuelve None
+    return  #si no se encuentra la solucion, devuelve None
 
 
 def AStar_search(given_state, n, heuristic):
-    frontier = PriorityQueue() #se crea la cola de prioridad para los nodos por explorar
-    #se inicializa el nodo inicial y se verifica si es la solucion
-    explored = []
+    frontier = PriorityQueue()  # Cola de prioridad
+    frontier_dict = {}  # Diccionario para optimizar la gestión de nodos en la cola
+    explored = set()  # Conjunto de nodos explorados
     counter = 0
-    #se crea el nodo inicial con el estado dado, sin padre, sin movimiento, profundidad 0, costo 0 y tamaño n
-    root = State(given_state, None, None, 0, 0, n)
-    #si la heuristica es 0, se calcula la distancia de manhattan, si no, se calcula el numero de casillas mal colocadas
+    
+    root = State(given_state, None, None, 0, 0)
     if heuristic == 0:
-        root.Manhattan_Distance(n)
+        evaluation = root.Manhattan_Distance(n)
     else:
-        root.Misplaced_Tiles(n)
+        evaluation = root.Misplaced_Tiles(n)
+    
+    frontier.put((evaluation, counter, root))
+    frontier_dict[tuple(root.state)] = (evaluation, counter)  # Agregar el nodo inicial al diccionario
 
-    #se agrega el nodo inicial a la cola de prioridad con su evaluacion A* y un contador
-    #para el numero de nodos explorados
-    frontier.put((root.AStar_evaluation, counter, root))
-
-    #mientras la cola de prioridad no este vacia, se extrae el nodo actual y se expande
     while not frontier.empty():
-        _, _, current_node = frontier.get() #se extrae el nodo con menor evaluacion A*
-        explored.append(current_node.state) #se agrega el nodo actual a la lista de nodos explorados
+        current_node = frontier.get()  # Obtener el nodo con menor evaluación A*
+        current_node = current_node[2]
+        
+        if tuple(current_node.state) in explored:  # Si el nodo ya ha sido explorado
+            continue
+        
+        explored.add(tuple(current_node.state))  # Agregar a nodos explorados
 
-        if current_node.test(): #si el nodo actual es la solucion
-            return current_node.solution(), len(explored) #se devuelve la secuencia de tableros y el numero de nodos explorados
-
-        children = current_node.expand() #se expanden los nodos hijos del nodo actual
-        for child in children: #se itera sobre los nodos hijos
-            if child.state not in explored: #si el nodo hijo no ha sido explorado se incrementa el contador
+        if current_node.test():  # Si el nodo es la solución
+            return current_node.solution(), len(explored)
+        
+        children = current_node.expand(n)  # Expandir nodos hijos
+        for child in children:
+            if tuple(child.state) not in explored:
                 counter += 1
-                if heuristic == 0: #si la heuristica es 0, se calcula la distancia de manhattan, si no, se calcula el numero de casillas mal colocadas
-                    child.Manhattan_Distance(n)
+                if heuristic == 0:
+                    evaluation = child.Manhattan_Distance(n)
                 else:
-                    child.Misplaced_Tiles(n)
-                frontier.put((child.AStar_evaluation, counter, child)) #se agrega el nodo hijo a la cola de prioridad con su evaluacion A* y el contador si ninguno de los nodos hijos es la solucion
+                    evaluation = child.Misplaced_Tiles(n)
+
+                # Verificar si el hijo ya está en la cola y si tiene una mejor evaluación
+                if tuple(child.state) not in frontier_dict or frontier_dict[tuple(child.state)][0] > evaluation:
+                    frontier.put((evaluation, counter, child))
+                    frontier_dict[tuple(child.state)] = (evaluation, counter)  # Actualizar el diccionario
 
     return None  # No se encuentra la solucion, devuelve None

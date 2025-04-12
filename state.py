@@ -4,13 +4,12 @@ class State:
     
     AStar_evaluation = None
     heuristic = None
-    def __init__(self, state, parent, direction, depth, cost,n):
+    goal = None
+    def __init__(self, state, parent, direction, depth, cost):
         self.state = state
         self.parent = parent
         self.direction = direction
         self.depth = depth
-        self.n = n  
-        self.goal = self.generate_goal_state(n)
 
         if parent:
             self.cost = parent.cost + cost
@@ -18,7 +17,10 @@ class State:
         else:
             self.cost = cost
 
-            
+        if State.goal is None:
+            n = int(len(state) ** 0.5)  # Calcular n a partir de la longitud del estado
+            State.goal = self.generate_goal_state(n)  
+     
     def generate_goal_state(self, n):
         #Generar el estado meta basado en el tamaño de n
         return list(range(1, n * n)) + [0]
@@ -39,7 +41,7 @@ class State:
    
         self.AStar_evaluation = self.heuristic + self.cost
         
-        return(self.AStar_evaluation)
+        return self.AStar_evaluation
 
 
     #heuristic function based on number of misplaced tiles
@@ -68,23 +70,28 @@ class State:
         return moves
 
     #produces children of a given state
-    def expand(self): 
+    def expand(self,n): 
         x = self.state.index(0)
-        moves = self.available_moves(x, self.n)
-        
+        moves = self.available_moves(x,n)
         children = []
+        opposite = {'Left': 'Right', 'Right': 'Left', 'Up': 'Down', 'Down': 'Up'}
+        last_move = self.direction
         for direction in moves:
+            if last_move and direction == opposite.get(last_move):
+                continue
+                
             temp = self.state.copy()
             if direction == 'Left':
                 temp[x], temp[x - 1] = temp[x - 1], temp[x]
             elif direction == 'Right':
                 temp[x], temp[x + 1] = temp[x + 1], temp[x]
             elif direction == 'Up':
-                temp[x], temp[x - self.n] = temp[x - self.n], temp[x]
+                temp[x], temp[x - n] = temp[x - n], temp[x]
             elif direction == 'Down':
-                temp[x], temp[x + self.n] = temp[x + self.n], temp[x]
+                temp[x], temp[x + n] = temp[x + n], temp[x]
           
-            children.append(State(temp, self, direction, self.depth + 1, 1, self.n)) 
+            
+            children.append(State(temp, self, direction, self.depth + 1, 1)) 
         return children
 
 
@@ -92,10 +99,12 @@ class State:
 
     # Devuelve la secuencia de tableros desde el inicial hasta el actual
     def solution(self):
-        path = []
-        node = self
-        while node is not None:
-            path.append(node.state)
-            node = node.parent
-        path.reverse()
-        return path
+        solution = []
+        solution.append(self.direction)
+        path = self
+        while path.parent != None:
+            path = path.parent
+            solution.append(path.direction)
+        solution = solution[:-1]
+        solution.reverse()
+        return solution
