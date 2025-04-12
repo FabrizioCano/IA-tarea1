@@ -1,4 +1,4 @@
-from algoritmos_busqueda import BFS, AStar_search
+from algoritmos_busqueda import BFS, AStar_search,DFS
 import random
 from time import time
 import random
@@ -69,6 +69,13 @@ print("Tablero Solucion de A* (h=Piezas mal colocadas): ")
 print("Tiempo de A*: ",time_astar1)
 print(f'Numero de nodos expandidos: {tablero_Astar2[1]}')
 
+#resolver por Busqueda en profundidad
+time_idfs=time()
+tablero_DFS=DFS(tablero_inicial,n)
+time_fdfs=time()-time_idfs
+print("Tablero solucion de DFS: ")
+print("Tiempo de Busqueda en profundidad: ",time_fdfs)
+print(f'Numero de nodos expandidos: {tablero_DFS[1]}')
 
 #resolver por Busqueda en anchura
 time_ibfs=time()
@@ -93,7 +100,14 @@ with open("resultados.txt","a") as f:
     f.write(f"Nodos expandidos: {tablero_Astar2[1]}\n")
     f.write(f"Movimientos: {tablero_Astar2[0]}\n\n")
 
+    f.write("=== Busqueda en Profundidad (DFS) ===\n")
+    f.write(f"Tiempo de ejecucion: {time_fdfs:.6f} segundos\n")
+    f.write(f"Nodos expandidos: {tablero_DFS[1]}\n")
+    f.write(f"Movimientos: {tablero_DFS[0]}\n\n")
+    
     f.write("=== Busqueda en Anchura (BFS) ===\n")
     f.write(f"Tiempo de ejecucion: {time_fbfs:.6f} segundos\n")
     f.write(f"Nodos expandidos: {tablero_BFS[1]}\n")
     f.write(f"Movimientos: {tablero_BFS[0]}\n\n")
+    
+    
