@@ -17,26 +17,27 @@ class State:
         else:
             self.cost = cost
 
-        if State.goal is None:
-            n = int(len(state) ** 0.5)  # Calcular n a partir de la longitud del estado
-            State.goal = self.generate_goal_state(n)  
+        n = int(len(state) ** 0.5)  # Calcular n a partir del estado
+
+        # Generar el goal si no existe o si tiene un tamaño diferente al actual
+        if State.goal is None or len(State.goal) != len(state):
+            State.goal = self.generate_goal_state(n)
      
     def generate_goal_state(self, n):
         #Generar el estado meta basado en el tamaño de n
         return list(range(1, n * n)) + [0]
     
-    def test(self): #check if the given state is goal
+    def test(self): #testear si el estado actual es el estado meta
         if self.state == self.goal:
             return True
         return False
         
-    #heuristic function based on Manhattan distance
+    #funcion heuristica basada en la distancia de manhattan
     def Manhattan_Distance(self ,n): 
         self.heuristic = 0
         for i in range(1 , n*n):
             distance = abs(self.state.index(i) - self.goal.index(i))
             
-            #manhattan distance between the current state and goal state
             self.heuristic = self.heuristic + distance/n + distance%n
    
         self.AStar_evaluation = self.heuristic + self.cost
@@ -44,7 +45,7 @@ class State:
         return self.AStar_evaluation
 
 
-    #heuristic function based on number of misplaced tiles
+    #funcion heuristica basada en piezas mal colocadas
     def Misplaced_Tiles(self,n): 
         self.heuristic = sum(1 for i in range(n*n) if self.state[i] != 0 and self.state[i] != self.goal[i]) 
         self.AStar_evaluation = self.heuristic + self.cost
@@ -55,7 +56,7 @@ class State:
 
     @staticmethod
     
-    #this would remove illegal moves for a given state
+    #remueve los movimientos que no son posibles
     def available_moves(x,n): 
         moves = ['Left', 'Right', 'Up', 'Down']
         if x % n == 0:
@@ -69,7 +70,7 @@ class State:
 
         return moves
 
-    #produces children of a given state
+    #expande nodos hjos de un determinado estado
     def expand(self,n): 
         x = self.state.index(0)
         moves = self.available_moves(x,n)

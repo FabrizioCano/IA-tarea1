@@ -1,11 +1,13 @@
 from state import State
-from queue import PriorityQueue,LifoQueue
-from queue import Queue
+from queue import PriorityQueue, LifoQueue,Queue
+import time
 
 
 
-def BFS(given_state, n):
+
+def BFS(given_state, n,timeout=10):
     #nodo inicial
+    start_time = time.time()
     root = State(given_state, None, None, 0, 0)
     #verifica si el nodo inicial es la solucion
     if root.test():
@@ -18,6 +20,8 @@ def BFS(given_state, n):
 
     #mientras la cola no este vacia, se extrae el nodo actual y se expande
     while not frontier.empty():
+        if time.time() - start_time > timeout:
+            return None, "TIMEOUT"
         current_node = frontier.get() 
         explored.add(tuple(current_node.state)) #se agrega el nodo actual a la lista de nodos explorados
         children = current_node.expand(n) #se expanden los nodos hijos del nodo actual
@@ -30,31 +34,9 @@ def BFS(given_state, n):
     
     return  #si no se encuentra la solucion, devuelve None
 
-def DFS(given_state , n): 
-    root = State(given_state, None, None, 0, 0)
-    if root.test():
-        return root.solution()
-    frontier = LifoQueue()
-    frontier.put(root)
-    explored = []
-    
-    while not(frontier.empty()):
-        current_node = frontier.get()
-        max_depth = current_node.depth #current depth
-        explored.append(current_node.state)
-        
-        if max_depth == 30:
-            continue #go to the next branch
 
-        children = current_node.expand(n)
-        for child in children:
-            if child.state not in explored:
-                if child.test():
-                    return child.solution(), len(explored)
-                frontier.put(child)
-    return (("Couldn't find solution in the limited depth."), len(explored))
-
-def AStar_search(given_state, n, heuristic):
+def AStar_search(given_state, n, heuristic,timeout=10):
+    start_time = time.time()
     frontier = PriorityQueue()  # Cola de prioridad
     frontier_dict = {}  # Diccionario para optimizar la gestión de nodos en la cola
     explored = set()  # Conjunto de nodos explorados
@@ -70,6 +52,8 @@ def AStar_search(given_state, n, heuristic):
     frontier_dict[tuple(root.state)] = (evaluation, counter)  # Agregar el nodo inicial al diccionario
 
     while not frontier.empty():
+        if time.time() - start_time > timeout:
+            return None, "TIMEOUT"
         current_node = frontier.get()  # Obtener el nodo con menor evaluación A*
         current_node = current_node[2]
         
@@ -96,3 +80,32 @@ def AStar_search(given_state, n, heuristic):
                     frontier_dict[tuple(child.state)] = (evaluation, counter)  # Actualizar el diccionario
 
     return  # No se encuentra la solucion, devuelve None
+
+
+def DFS(given_state , n,timeout=10): 
+    start_time = time.time()
+    root = State(given_state, None, None, 0, 0)
+    if root.test():
+        return root.solution()
+    frontier = LifoQueue()
+    frontier.put(root)
+    explored = []
+    
+    while not(frontier.empty()):
+        if time.time() - start_time > timeout:
+            return None, "TIMEOUT"
+        current_node = frontier.get()
+        max_depth = current_node.depth #current depth
+        explored.append(current_node.state)
+        
+        if max_depth == 30:
+            continue #go to the next branch
+
+        children = current_node.expand(n)
+        for child in children:
+            if child.state not in explored:
+                if child.test():
+                    return child.solution(), len(explored)
+                frontier.put(child)
+    return (("No se puede encontrar la solucion con una profunidad limitada"), len(explored))
+
