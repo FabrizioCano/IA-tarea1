@@ -1,173 +1,375 @@
-Estado inicial:
-[0, 6, 5]
-[1, 2, 8]
-[3, 4, 7]
+Estado meta:
+[1, 2]
+[3, 0]
 
-=== A* con heuristica: Distancia de Manhattan ===
-Tiempo de ejecucion: 0.000000 segundos
-Nodos expandidos: 429
-Movimientos: ['Down', 'Down', 'Right', 'Right', 'Up', 'Up', 'Left', 'Down', 'Left', 'Up', 'Right', 'Down', 'Right', 'Up', 'Left', 'Left', 'Down', 'Down', 'Right', 'Right']
+Estado inicial (solucionable):
+[1, 2]
+[3, 0]
 
-=== A* con heuristica: Piezas mal colocadas ===
-Tiempo de ejecucion: 0.046836 segundos
-Nodos expandidos: 4873
-Movimientos: ['Down', 'Down', 'Right', 'Right', 'Up', 'Up', 'Left', 'Down', 'Left', 'Up', 'Right', 'Down', 'Right', 'Up', 'Left', 'Left', 'Down', 'Down', 'Right', 'Right']
+Resolviendo el tablero...
 
-=== Busqueda en Anchura (BFS) ===
-Tiempo de ejecucion: 0.217860 segundos
-Nodos expandidos: 52862
-Movimientos: ['Down', 'Down', 'Right', 'Right', 'Up', 'Left', 'Up', 'Right', 'Down', 'Left', 'Left', 'Down', 'Right', 'Right', 'Up', 'Left', 'Up', 'Right', 'Down', 'Down']
+=== A* (Distancia Manhattan) ===
+Tiempo: 0.000000 s
+Nodos expandidos: 1
 
-Estado inicial:
-[1, 4, 2]
-[5, 6, 7]
-[0, 8, 3]
+Movimientos:  []
 
-=== A* con heuristica: Distancia de Manhattan ===
-Tiempo de ejecucion: 0.015626 segundos
-Nodos expandidos: 254
-Movimientos: ['Right', 'Up', 'Right', 'Down', 'Left', 'Left', 'Up', 'Right', 'Up', 'Right', 'Down', 'Down', 'Left', 'Left', 'Up', 'Right', 'Down', 'Right']
+=== A* (Piezas mal colocadas) ===
+Tiempo: 0.000000 s
+Nodos expandidos: 1
 
-=== A* con heuristica: Piezas mal colocadas ===
-Tiempo de ejecucion: 0.037014 segundos
-Nodos expandidos: 1350
-Movimientos: ['Right', 'Up', 'Right', 'Down', 'Left', 'Left', 'Up', 'Right', 'Up', 'Right', 'Down', 'Down', 'Left', 'Left', 'Up', 'Right', 'Down', 'Right']
+Movimientos: []
 
-=== Busqueda en Anchura (BFS) ===
-Tiempo de ejecucion: 0.083155 segundos
-Nodos expandidos: 21191
-Movimientos: ['Right', 'Up', 'Right', 'Down', 'Left', 'Left', 'Up', 'Right', 'Up', 'Right', 'Down', 'Down', 'Left', 'Left', 'Up', 'Right', 'Down', 'Right']
+=== BFS ===
+Tiempo: 0.000000 s
+Nodos expandidos: 0
 
-Estado inicial:
-[2, 3, 5]
-[8, 7, 1]
-[6, 0, 4]
+Movimientos: 0
 
-=== A* con heuristica: Distancia de Manhattan ===
-Tiempo de ejecucion: 0.000000 segundos
-Nodos expandidos: 102
-Movimientos: ['Left', 'Up', 'Right', 'Right', 'Down', 'Left', 'Left', 'Up', 'Right', 'Right', 'Up', 'Left', 'Left', 'Down', 'Right', 'Right', 'Down']
+=== DFS ===
+Tiempo: 0.000000 s
+Nodos expandidos: 0
 
-=== A* con heuristica: Piezas mal colocadas ===
-Tiempo de ejecucion: 0.023496 segundos
-Nodos expandidos: 866
-Movimientos: ['Left', 'Up', 'Right', 'Right', 'Down', 'Left', 'Left', 'Up', 'Right', 'Right', 'Up', 'Left', 'Left', 'Down', 'Right', 'Right', 'Down']
+Movimientos: 0
 
-=== Busqueda en Anchura (BFS) ===
-Tiempo de ejecucion: 0.047416 segundos
-Nodos expandidos: 12909
-Movimientos: ['Left', 'Up', 'Right', 'Right', 'Down', 'Left', 'Left', 'Up', 'Right', 'Right', 'Up', 'Left', 'Left', 'Down', 'Right', 'Right', 'Down']
 
-Estado inicial:
-[2, 1, 3]
-[7, 6, 5]
-[0, 8, 4]
+Estado meta:
+[1, 2]
+[3, 0]
 
-=== A* con heuristica: Distancia de Manhattan ===
-Tiempo de ejecucion: 0.000000 segundos
-Nodos expandidos: 539
-Movimientos: ['Right', 'Up', 'Up', 'Right', 'Down', 'Down', 'Left', 'Left', 'Up', 'Right', 'Right', 'Up', 'Left', 'Left', 'Down', 'Right', 'Right', 'Down']
+Estado inicial (solucionable):
+[1, 2]
+[3, 0]
 
-=== A* con heuristica: Piezas mal colocadas ===
-Tiempo de ejecucion: 0.084085 segundos
-Nodos expandidos: 1547
-Movimientos: ['Right', 'Up', 'Up', 'Right', 'Down', 'Down', 'Left', 'Left', 'Up', 'Right', 'Right', 'Up', 'Left', 'Left', 'Down', 'Right', 'Right', 'Down']
+Resolviendo el tablero...
 
-=== Busqueda en Anchura (BFS) ===
-Tiempo de ejecucion: 0.070415 segundos
-Nodos expandidos: 22384
-Movimientos: ['Right', 'Up', 'Up', 'Right', 'Down', 'Down', 'Left', 'Left', 'Up', 'Right', 'Right', 'Up', 'Left', 'Left', 'Down', 'Right', 'Right', 'Down']
+=== A* (Distancia Manhattan) ===
+Tiempo: 0.000000 s
+Nodos expandidos: 1
 
-Estado inicial:
-[8, 6, 2]
-[3, 7, 4]
-[1, 0, 5]
+Movimientos:  []
 
-=== A* con heuristica: Distancia de Manhattan ===
-Tiempo de ejecucion: 0.020157 segundos
-Nodos expandidos: 1522
-Movimientos: ['Up', 'Up', 'Left', 'Down', 'Down', 'Right', 'Up', 'Right', 'Up', 'Left', 'Left', 'Down', 'Right', 'Right', 'Up', 'Left', 'Down', 'Right', 'Down', 'Left', 'Up', 'Right', 'Down']
+=== A* (Piezas mal colocadas) ===
+Tiempo: 0.000000 s
+Nodos expandidos: 1
 
-=== A* con heuristica: Piezas mal colocadas ===
-Tiempo de ejecucion: 0.126069 segundos
-Nodos expandidos: 12969
-Movimientos: ['Up', 'Up', 'Left', 'Down', 'Down', 'Right', 'Up', 'Right', 'Up', 'Left', 'Left', 'Down', 'Right', 'Right', 'Up', 'Left', 'Down', 'Right', 'Down', 'Left', 'Up', 'Right', 'Down']
+Movimientos: []
 
-=== Busqueda en Anchura (BFS) ===
-Tiempo de ejecucion: 0.584216 segundos
-Nodos expandidos: 122518
-Movimientos: ['Up', 'Up', 'Left', 'Down', 'Down', 'Right', 'Up', 'Right', 'Up', 'Left', 'Left', 'Down', 'Right', 'Right', 'Up', 'Left', 'Down', 'Right', 'Down', 'Left', 'Up', 'Right', 'Down']
+=== BFS ===
+Tiempo: 0.000000 s
+Nodos expandidos: 0
 
-Estado inicial:
-[3, 1]
-[0, 2]
+Movimientos: 0
 
-=== A* con heuristica: Distancia de Manhattan ===
-Tiempo de ejecucion: 0.000000 segundos
-Nodos expandidos: 4
-Movimientos: ['Up', 'Right', 'Down']
+=== DFS ===
+Tiempo: 0.000000 s
+Nodos expandidos: 0
 
-=== A* con heuristica: Piezas mal colocadas ===
-Tiempo de ejecucion: 0.000000 segundos
-Nodos expandidos: 4
-Movimientos: ['Up', 'Right', 'Down']
+Movimientos: 0
 
-=== Busqueda en Profundidad (DFS) ===
-Tiempo de ejecucion: 0.000000 segundos
-Nodos expandidos: 3
-Movimientos: ['Up', 'Right', 'Down']
 
-=== Busqueda en Anchura (BFS) ===
-Tiempo de ejecucion: 0.000000 segundos
-Nodos expandidos: 6
-Movimientos: ['Up', 'Right', 'Down']
+Estado meta:
+[1, 2]
+[3, 0]
 
-Estado inicial:
-[4, 1, 8]
-[2, 7, 5]
-[3, 0, 6]
+Estado inicial (solucionable):
+[1, 2]
+[3, 0]
 
-=== A* con heuristica: Distancia de Manhattan ===
-Tiempo de ejecucion: 0.009622 segundos
-Nodos expandidos: 556
-Movimientos: ['Up', 'Left', 'Down', 'Right', 'Up', 'Left', 'Up', 'Right', 'Down', 'Down', 'Right', 'Up', 'Up', 'Left', 'Down', 'Right', 'Down', 'Left', 'Up', 'Right', 'Down']
+Resolviendo el tablero...
 
-=== A* con heuristica: Piezas mal colocadas ===
-Tiempo de ejecucion: 0.065418 segundos
-Nodos expandidos: 5602
-Movimientos: ['Up', 'Left', 'Down', 'Right', 'Up', 'Left', 'Up', 'Right', 'Down', 'Down', 'Right', 'Up', 'Up', 'Left', 'Down', 'Right', 'Down', 'Left', 'Up', 'Right', 'Down']
+=== A* (Distancia Manhattan) ===
+Tiempo: 0.000000 s
+Nodos expandidos: 1
 
-=== Busqueda en Profundidad (DFS) ===
-Tiempo de ejecucion: 4.194511 segundos
-Nodos expandidos: 22941
-Movimientos: ['Up', 'Left', 'Up', 'Right', 'Down', 'Down', 'Left', 'Up', 'Up', 'Right', 'Down', 'Down', 'Right', 'Up', 'Left', 'Up', 'Right', 'Down', 'Down', 'Left', 'Up', 'Up', 'Left', 'Down', 'Down', 'Right', 'Up', 'Right', 'Down']
+Movimientos:  []
 
-=== Busqueda en Anchura (BFS) ===
-Tiempo de ejecucion: 0.250248 segundos
-Nodos expandidos: 61407
-Movimientos: ['Left', 'Up', 'Right', 'Down', 'Left', 'Up', 'Up', 'Right', 'Down', 'Down', 'Right', 'Up', 'Up', 'Left', 'Down', 'Right', 'Down', 'Left', 'Up', 'Right', 'Down']
+=== A* (Piezas mal colocadas) ===
+Tiempo: 0.000000 s
+Nodos expandidos: 1
 
-Estado inicial:
+Movimientos: []
+
+=== BFS ===
+Tiempo: 0.000000 s
+Nodos expandidos: 0
+
+Movimientos: 0
+
+=== DFS ===
+Tiempo: 0.000000 s
+Nodos expandidos: 0
+
+Movimientos: 0
+
+
+Estado meta:
+[1, 2]
+[3, 0]
+
+Estado inicial (solucionable):
 [3, 1]
 [2, 0]
 
-=== A* con heuristica: Distancia de Manhattan ===
-Tiempo de ejecucion: 0.000000 segundos
+Resolviendo el tablero...
+
+=== A* (Distancia Manhattan) ===
+Tiempo: 0.000000 s
 Nodos expandidos: 5
-Movimientos: ['Left', 'Up', 'Right', 'Down']
 
-=== A* con heuristica: Piezas mal colocadas ===
-Tiempo de ejecucion: 0.000000 segundos
+Movimientos:  ['Left', 'Up', 'Right', 'Down']
+
+=== A* (Piezas mal colocadas) ===
+Tiempo: 0.000000 s
 Nodos expandidos: 6
+
 Movimientos: ['Left', 'Up', 'Right', 'Down']
 
-=== Busqueda en Profundidad (DFS) ===
-Tiempo de ejecucion: 0.000000 segundos
+=== BFS ===
+Tiempo: 0.000000 s
+Nodos expandidos: 7
+
+Movimientos: ['Left', 'Up', 'Right', 'Down']
+
+=== DFS ===
+Tiempo: 0.000000 s
 Nodos expandidos: 8
+
 Movimientos: ['Up', 'Left', 'Down', 'Right', 'Up', 'Left', 'Down', 'Right']
 
-=== Busqueda en Anchura (BFS) ===
-Tiempo de ejecucion: 0.000000 segundos
-Nodos expandidos: 7
-Movimientos: ['Left', 'Up', 'Right', 'Down']
+
+Estado meta:
+[1, 2, 3]
+[4, 5, 6]
+[7, 8, 0]
+
+Estado inicial (solucionable):
+[3, 5, 1]
+[6, 4, 2]
+[7, 8, 0]
+
+Resolviendo el tablero...
+
+=== A* (Distancia Manhattan) ===
+Tiempo: 0.010087 s
+Nodos expandidos: 1147
+
+Movimientos:  ['Left', 'Left', 'Up', 'Right', 'Up', 'Left', 'Down', 'Down', 'Right', 'Up', 'Up', 'Right', 'Down', 'Left', 'Left', 'Up', 'Right', 'Right', 'Down', 'Left', 'Down', 'Right']
+
+=== A* (Piezas mal colocadas) ===
+Tiempo: 0.080057 s
+Nodos expandidos: 7811
+
+Movimientos: ['Left', 'Left', 'Up', 'Right', 'Up', 'Left', 'Down', 'Down', 'Right', 'Up', 'Up', 'Right', 'Down', 'Left', 'Left', 'Up', 'Right', 'Right', 'Down', 'Left', 'Down', 'Right']
+
+=== BFS ===
+Tiempo: 0.331712 s
+Nodos expandidos: 74417
+
+Movimientos: ['Left', 'Left', 'Up', 'Right', 'Up', 'Left', 'Down', 'Down', 'Right', 'Up', 'Up', 'Right', 'Down', 'Left', 'Left', 'Up', 'Right', 'Right', 'Down', 'Left', 'Down', 'Right']
+
+=== DFS ===
+Tiempo: 8.014912 s
+Nodos expandidos: 31674
+
+Movimientos: No se puede encontrar la solucion con una profunidad limitada
+
+
+Estado meta:
+[1, 2, 3]
+[4, 5, 6]
+[7, 8, 0]
+
+Estado inicial (solucionable):
+[6, 4, 7]
+[3, 8, 5]
+[2, 1, 0]
+
+Resolviendo el tablero...
+
+=== A* (Distancia Manhattan) ===
+Tiempo: 0.046867 s
+Nodos expandidos: 4024
+
+Movimientos:  ['Up', 'Up', 'Left', 'Left', 'Down', 'Down', 'Right', 'Right', 'Up', 'Left', 'Down', 'Right', 'Up', 'Up', 'Left', 'Left', 'Down', 'Down', 'Right', 'Up', 'Right', 'Up', 'Left', 'Left', 'Down', 'Right', 'Down', 'Right']
+
+=== A* (Piezas mal colocadas) ===
+Tiempo: 0.938392 s
+Nodos expandidos: 71397
+
+Movimientos: ['Up', 'Left', 'Left', 'Down', 'Right', 'Right', 'Up', 'Left', 'Up', 'Left', 'Down', 'Down', 'Right', 'Up', 'Up', 'Right', 'Down', 'Left', 'Up', 'Left', 'Down', 'Right', 'Down', 'Left', 'Up', 'Right', 'Down', 'Right']
+
+=== BFS ===
+Tiempo: 1.119423 s
+Nodos expandidos: 179790
+
+Movimientos: ['Left', 'Up', 'Up', 'Right', 'Down', 'Down', 'Left', 'Up', 'Up', 'Left', 'Down', 'Down', 'Right', 'Up', 'Right', 'Up', 'Left', 'Left', 'Down', 'Right', 'Right', 'Up', 'Left', 'Left', 'Down', 'Down', 'Right', 'Right']
+
+=== DFS ===
+Tiempo: 7.832530 s
+Nodos expandidos: 31674
+
+Movimientos: No se puede encontrar la solucion con una profunidad limitada
+
+
+Estado meta:
+[1, 2, 3]
+[4, 5, 6]
+[7, 8, 0]
+
+Estado inicial (solucionable):
+[6, 3, 7]
+[5, 4, 1]
+[2, 8, 0]
+
+Resolviendo el tablero...
+
+=== A* (Distancia Manhattan) ===
+Tiempo: 0.015617 s
+Nodos expandidos: 949
+
+Movimientos:  ['Left', 'Left', 'Up', 'Right', 'Up', 'Right', 'Down', 'Left', 'Up', 'Left', 'Down', 'Right', 'Up', 'Right', 'Down', 'Left', 'Down', 'Left', 'Up', 'Up', 'Right', 'Down', 'Down', 'Right']
+
+=== A* (Piezas mal colocadas) ===
+Tiempo: 0.171877 s
+Nodos expandidos: 16982
+
+Movimientos: ['Left', 'Left', 'Up', 'Right', 'Up', 'Right', 'Down', 'Left', 'Up', 'Left', 'Down', 'Right', 'Up', 'Right', 'Down', 'Left', 'Down', 'Left', 'Up', 'Up', 'Right', 'Down', 'Down', 'Right']
+
+=== BFS ===
+Tiempo: 0.625004 s
+Nodos expandidos: 119441
+
+Movimientos: ['Left', 'Left', 'Up', 'Right', 'Up', 'Right', 'Down', 'Left', 'Up', 'Left', 'Down', 'Right', 'Up', 'Right', 'Down', 'Left', 'Down', 'Left', 'Up', 'Up', 'Right', 'Down', 'Down', 'Right']
+
+
+Estado meta:
+[1, 2, 3, 4]
+[5, 6, 7, 8]
+[9, 10, 11, 12]
+[13, 14, 15, 0]
+
+Estado inicial (solucionable):
+[6, 3, 13, 15]
+[4, 14, 1, 9]
+[7, 11, 12, 2]
+[5, 10, 8, 0]
+
+=== A* (Distancia Manhattan) ===
+Tiempo: 10.393121 s
+Nodos expandidos: o
+
+Movimientos:  N
+
+=== A* (Piezas mal colocadas) ===
+Tiempo: 10.593082 s
+Nodos expandidos: o
+
+Movimientos: N
+
+=== BFS ===
+Tiempo: 10.896462 s
+Nodos expandidos: o
+
+Movimientos: N
+
+=== DFS ===
+Tiempo: 10.010448 s
+Nodos expandidos: o
+
+Movimientos: N
+
+
+Estado meta:
+[1, 2]
+[3, 0]
+
+Estado inicial (solucionable):
+[2, 3]
+[1, 0]
+
+=== A* (Distancia Manhattan) ===
+Tiempo: 0.000000 s
+Nodos expandidos: 5
+
+Movimientos:  ['Up', 'Left', 'Down', 'Right']
+
+=== A* (Piezas mal colocadas) ===
+Tiempo: 0.000000 s
+Nodos expandidos: 6
+
+Movimientos: ['Up', 'Left', 'Down', 'Right']
+
+=== BFS ===
+Tiempo: 0.000000 s
+Nodos expandidos: 8
+
+Movimientos: ['Up', 'Left', 'Down', 'Right']
+
+=== DFS ===
+Tiempo: 0.000000 s
+Nodos expandidos: 4
+
+Movimientos: ['Up', 'Left', 'Down', 'Right']
+
+
+Estado meta:
+[1, 2, 3]
+[4, 5, 6]
+[7, 8, 0]
+
+Estado inicial (solucionable):
+[6, 4, 2]
+[7, 3, 8]
+[5, 1, 0]
+
+=== A* (Distancia Manhattan) ===
+Tiempo: 0.000000 s
+Nodos expandidos: 21
+
+Movimientos:  ['Up', 'Left', 'Down', 'Left', 'Up', 'Right', 'Up', 'Left', 'Down', 'Right', 'Up', 'Right', 'Down', 'Left', 'Down', 'Right']
+
+=== A* (Piezas mal colocadas) ===
+Tiempo: 0.000000 s
+Nodos expandidos: 493
+
+Movimientos: ['Up', 'Left', 'Down', 'Left', 'Up', 'Right', 'Up', 'Left', 'Down', 'Right', 'Up', 'Right', 'Down', 'Left', 'Down', 'Right']
+
+=== BFS ===
+Tiempo: 0.046858 s
+Nodos expandidos: 10757
+
+Movimientos: ['Up', 'Left', 'Down', 'Left', 'Up', 'Right', 'Up', 'Left', 'Down', 'Right', 'Up', 'Right', 'Down', 'Left', 'Down', 'Right']
+
+=== DFS ===
+Tiempo: 7.653555 s
+Nodos expandidos: 31674
+
+Movimientos: No se puede encontrar la solucion con una profunidad limitada
+
+
+Estado meta:
+[1, 2, 3, 4]
+[5, 6, 7, 8]
+[9, 10, 11, 12]
+[13, 14, 15, 0]
+
+Estado inicial (solucionable):
+[4, 11, 10, 7]
+[3, 13, 14, 2]
+[12, 6, 9, 8]
+[15, 1, 5, 0]
+
+=== A* (Distancia Manhattan) ===
+No se pudo resolver: complejidad espacial muy grande (timeout).
+
+=== A* (Piezas mal colocadas) ===
+No se pudo resolver: complejidad espacial muy grande (timeout).
+
+=== BFS ===
+No se pudo resolver: complejidad espacial muy grande (timeout).
+
+=== DFS ===
+No se pudo resolver: complejidad espacial muy grande (timeout).
+
 
