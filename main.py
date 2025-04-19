@@ -75,16 +75,16 @@ def resolver():
         result_output.insert(tk.END, "No se pudo resolver: complejidad espacial muy grande (timeout).\n\n")
         messagebox.showwarning("A* Manhattan", "No se pudo resolver: complejidad espacial muy grande.")
     else:
-        result_output.insert(tk.END, f"Tiempo: {t_astar2:.6f} s\n")
-        result_output.insert(tk.END, f"Nodos expandidos: {resultado_astar2[1]}\n\n")
-        result_output.insert(tk.END,f"Movimientos: {resultado_astar2[0]}\n\n") 
+        result_output.insert(tk.END, f"Tiempo: {t_astar:.6f} s\n")
+        result_output.insert(tk.END, f"Nodos expandidos: {resultado_astar2[1] if resultado_astar2 is not None and resultado_astar2[1] is not None else "0"}\n\n")
+        result_output.insert(tk.END,f"Movimientos:  {resultado_astar2[0] if  resultado_astar2 is not None and resultado_astar2[0] is not None else "0"}\n\n")  
 
     # BFS
     t0 = time()
     resultado_bfs = BFS(tablero_inicial, n)
     t_bfs = time() - t0
     result_output.insert(tk.END, "=== BFS ===\n")
-    if resultado_bfs[1] == "TIMEOUT":
+    if len(resultado_bfs) > 1 and resultado_bfs[1] == "TIMEOUT":
         result_output.insert(tk.END, "No se pudo resolver: complejidad espacial muy grande (timeout).\n\n")
         messagebox.showwarning("BFS", "No se pudo resolver: complejidad espacial muy grande.")
     else:
@@ -99,13 +99,10 @@ def resolver():
     resultado_dfs = DFS(tablero_inicial, n)
     t_dfs = time() - t0
     result_output.insert(tk.END, "=== DFS ===\n")
-    if resultado_dfs[1] == "TIMEOUT":
-        result_output.insert(tk.END, "No se pudo resolver: complejidad espacial muy grande (timeout).\n\n")
-        messagebox.showwarning("DFS", "No se pudo resolver: complejidad espacial muy grande.")
-    else:
-        result_output.insert(tk.END, f"Tiempo: {t_dfs:.6f} s\n")
-        result_output.insert(tk.END, f"Nodos expandidos: {resultado_dfs[1] if len(resultado_dfs) > 1 and resultado_dfs[1] is not None else "0"}\n\n")
-        result_output.insert(tk.END,f"Movimientos: {resultado_dfs[0] if len(resultado_dfs) > 1 and resultado_dfs[0] is not None else "0"}\n\n")
+    
+    result_output.insert(tk.END, f"Tiempo: {t_dfs:.6f} s\n")
+    result_output.insert(tk.END, f"Nodos expandidos: {resultado_dfs[1] if len(resultado_dfs) > 1 and resultado_dfs[1] is not None else "0"}\n\n")
+    result_output.insert(tk.END,f"Movimientos: {resultado_dfs[0] if len(resultado_dfs) > 1 and resultado_dfs[0] is not None else "0"}\n\n")
     
     with open("resultados.txt", "a") as f:
         f.write(result_output.get("1.0", tk.END))
