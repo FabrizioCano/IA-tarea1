@@ -2,10 +2,7 @@ from state import State
 from queue import PriorityQueue, LifoQueue,Queue
 import time
 
-
-
-
-def BFS(given_state, n,timeout=10):
+def BFS(given_state, n,timeout=20):
     #nodo inicial
     start_time = time.time()
     root = State(given_state, None, None, 0, 0)
@@ -35,7 +32,7 @@ def BFS(given_state, n,timeout=10):
     return  #si no se encuentra la solucion, devuelve None
 
 
-def AStar_search(given_state, n, heuristic,timeout=10):
+def AStar_search(given_state, n, heuristic,timeout=20):
     start_time = time.time()
     frontier = PriorityQueue()  # Cola de prioridad
     frontier_dict = {}  # Diccionario para optimizar la gestión de nodos en la cola
@@ -43,6 +40,8 @@ def AStar_search(given_state, n, heuristic,timeout=10):
     counter = 0
     
     root = State(given_state, None, None, 0, 0)
+    if root.test():
+        return root.solution(), 0  # Solución encontrada sin expandir ningún nodo
     if heuristic == 0:
         evaluation = root.Manhattan_Distance(n)
     else:
@@ -82,30 +81,28 @@ def AStar_search(given_state, n, heuristic,timeout=10):
     return  # No se encuentra la solucion, devuelve None
 
 
-def DFS(given_state , n,timeout=10): 
-    start_time = time.time()
+def DFS(given_state, n): 
     root = State(given_state, None, None, 0, 0)
     if root.test():
-        return root.solution()
+        return root.solution(), 0  # Solución encontrada sin expandir ningún nodo
     frontier = LifoQueue()
     frontier.put(root)
-    explored = []
+    explored = set()
     
-    while not(frontier.empty()):
-        if time.time() - start_time > timeout:
-            return None, "TIMEOUT"
+    while not frontier.empty():
         current_node = frontier.get()
-        max_depth = current_node.depth #current depth
-        explored.append(current_node.state)
+        max_depth = current_node.depth  # Current depth
+        explored.add(tuple(current_node.state)) 
         
         if max_depth == 30:
-            continue #go to the next branch
+            continue  # Go to the next branch
 
         children = current_node.expand(n)
         for child in children:
-            if child.state not in explored:
+            if tuple(child.state) not in explored:
                 if child.test():
                     return child.solution(), len(explored)
                 frontier.put(child)
-    return (("No se puede encontrar la solucion con una profunidad limitada"), len(explored))
+    return (("No se puede encontrar la solución con una profundidad limitada"), len(explored))
+
 
