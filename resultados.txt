@@ -1172,3 +1172,788 @@ Nodos expandidos: 22355
 Movimientos: ['Up', 'Up', 'Left', 'Down', 'Down', 'Left', 'Up', 'Up', 'Right', 'Down', 'Down', 'Right', 'Up', 'Left', 'Left', 'Up', 'Right', 'Down', 'Down', 'Right', 'Up', 'Left', 'Left', 'Up', 'Right', 'Right', 'Down', 'Left', 'Down', 'Right']
 
 
+Estado meta:
+[1, 2, 3]
+[4, 5, 6]
+[7, 8, 0]
+
+Estado inicial (solucionable):
+[4, 3, 8]
+[7, 6, 1]
+[5, 2, 0]
+
+=== A* (Distancia Manhattan) ===
+Tiempo: 0.049518 s
+Nodos expandidos: 115
+
+Movimientos:  ['Left', 'Up', 'Right', 'Up', 'Left', 'Down', 'Down', 'Right', 'Up', 'Left', 'Down', 'Left', 'Up', 'Up', 'Right', 'Down', 'Down', 'Right']
+
+=== A* (Piezas mal colocadas) ===
+Tiempo: 0.049518 s
+Nodos expandidos: 1266
+
+Movimientos:  ['Left', 'Up', 'Right', 'Up', 'Left', 'Down', 'Down', 'Right', 'Up', 'Left', 'Down', 'Left', 'Up', 'Up', 'Right', 'Down', 'Down', 'Right']
+
+=== BFS ===
+Tiempo: 3.304140 s
+Nodos expandidos: 21035
+
+Movimientos: ['Left', 'Up', 'Right', 'Up', 'Left', 'Down', 'Down', 'Right', 'Up', 'Left', 'Down', 'Left', 'Up', 'Up', 'Right', 'Down', 'Down', 'Right']
+
+=== DFS ===
+Tiempo: 5.259248 s
+Nodos expandidos: 31575
+
+Movimientos: No se puede encontrar la solución con una profundidad limitada
+
+
+Estado meta:
+[1, 2]
+[3, 0]
+
+Estado inicial (solucionable):
+[3, 1]
+[2, 0]
+
+=== A* (Distancia Manhattan) ===
+Tiempo: 0.001261 s
+Nodos expandidos: 5
+
+Movimientos:  ['Left', 'Up', 'Right', 'Down']
+
+=== A* (Piezas mal colocadas) ===
+Tiempo: 0.001261 s
+Nodos expandidos: 6
+
+Movimientos:  ['Left', 'Up', 'Right', 'Down']
+
+=== BFS ===
+Tiempo: 0.001228 s
+Nodos expandidos: 7
+
+Movimientos: ['Left', 'Up', 'Right', 'Down']
+
+=== DFS ===
+Tiempo: 0.001450 s
+Nodos expandidos: 8
+
+Movimientos: ['Up', 'Left', 'Down', 'Right', 'Up', 'Left', 'Down', 'Right']
+
+
+Estado meta:
+[1, 2, 3]
+[4, 5, 6]
+[7, 8, 0]
+
+Estado inicial (solucionable):
+[5, 6, 8]
+[3, 1, 4]
+[2, 7, 0]
+
+=== A* (Distancia Manhattan) ===
+Tiempo: 0.210911 s
+Nodos expandidos: 596
+
+Movimientos:  ['Up', 'Up', 'Left', 'Left', 'Down', 'Down', 'Right', 'Right', 'Up', 'Up', 'Left', 'Left', 'Down', 'Right', 'Down', 'Right', 'Up', 'Up', 'Left', 'Left', 'Down', 'Right', 'Right', 'Down']
+
+=== A* (Piezas mal colocadas) ===
+Tiempo: 0.210911 s
+Nodos expandidos: 17307
+
+Movimientos:  ['Up', 'Up', 'Left', 'Down', 'Left', 'Up', 'Right', 'Down', 'Down', 'Left', 'Up', 'Right', 'Down', 'Right', 'Up', 'Up', 'Left', 'Down', 'Down', 'Left', 'Up', 'Right', 'Down', 'Right']
+
+=== BFS ===
+No se pudo resolver: complejidad espacial muy grande (timeout).
+
+=== DFS ===
+Tiempo: 4.686185 s
+Nodos expandidos: 31575
+
+Movimientos: No se puede encontrar la solución con una profundidad limitada
+
+
+Estado meta:
+[1, 2, 3]
+[4, 5, 6]
+[7, 8, 0]
+
+Estado inicial (solucionable):
+[6, 3, 5]
+[7, 8, 1]
+[2, 4, 0]
+
+=== A* (Distancia Manhattan) ===
+Tiempo: 0.410090 s
+Nodos expandidos: 1184
+
+Movimientos:  ['Left', 'Up', 'Right', 'Down', 'Left', 'Left', 'Up', 'Right', 'Right', 'Up', 'Left', 'Left', 'Down', 'Right', 'Up', 'Right', 'Down', 'Left', 'Down', 'Right', 'Up', 'Up', 'Left', 'Down', 'Right', 'Down']
+
+=== A* (Piezas mal colocadas) ===
+Tiempo: 0.410090 s
+Nodos expandidos: 38244
+
+Movimientos:  ['Left', 'Up', 'Right', 'Up', 'Left', 'Down', 'Down', 'Right', 'Up', 'Left', 'Left', 'Down', 'Right', 'Up', 'Left', 'Up', 'Right', 'Down', 'Left', 'Down', 'Right', 'Right', 'Up', 'Left', 'Down', 'Right']
+
+=== BFS ===
+No se pudo resolver: complejidad espacial muy grande (timeout).
+
+=== DFS ===
+Tiempo: 4.802090 s
+Nodos expandidos: 31575
+
+Movimientos: No se puede encontrar la solución con una profundidad limitada
+
+
+Estado meta:
+[1, 2, 3]
+[4, 5, 6]
+[7, 8, 0]
+
+Estado inicial (solucionable):
+[1, 2, 7]
+[6, 5, 3]
+[8, 4, 0]
+
+=== A* (Distancia Manhattan) ===
+Tiempo: 0.013232 s
+Nodos expandidos: 459
+
+Movimientos:  ['Up', 'Up', 'Left', 'Down', 'Left', 'Down', 'Right', 'Up', 'Right', 'Down', 'Left', 'Up', 'Left', 'Down', 'Right', 'Up', 'Up', 'Right', 'Down', 'Down']
+
+=== A* (Piezas mal colocadas) ===
+Tiempo: 0.013232 s
+Nodos expandidos: 3243
+
+Movimientos:  ['Up', 'Up', 'Left', 'Down', 'Left', 'Down', 'Right', 'Up', 'Right', 'Down', 'Left', 'Up', 'Left', 'Down', 'Right', 'Up', 'Up', 'Right', 'Down', 'Down']
+
+=== BFS ===
+Tiempo: 0.458632 s
+Nodos expandidos: 53942
+
+Movimientos: ['Up', 'Up', 'Left', 'Down', 'Left', 'Down', 'Right', 'Up', 'Right', 'Down', 'Left', 'Up', 'Left', 'Down', 'Right', 'Up', 'Up', 'Right', 'Down', 'Down']
+
+=== DFS ===
+Tiempo: 0.230744 s
+Nodos expandidos: 31575
+
+Movimientos: No se puede encontrar la solución con una profundidad limitada
+
+
+Estado meta:
+[1, 2]
+[3, 0]
+
+Estado inicial (solucionable):
+[3, 1]
+[2, 0]
+
+=== A* (Distancia Manhattan) ===
+Tiempo: 0.000295 s
+Nodos expandidos: 5
+
+Movimientos:  ['Left', 'Up', 'Right', 'Down']
+
+=== A* (Piezas mal colocadas) ===
+Tiempo: 0.000295 s
+Nodos expandidos: 6
+
+Movimientos:  ['Left', 'Up', 'Right', 'Down']
+
+=== BFS ===
+Tiempo: 0.000108 s
+Nodos expandidos: 7
+
+Movimientos: ['Left', 'Up', 'Right', 'Down']
+
+=== DFS ===
+Tiempo: 0.000112 s
+Nodos expandidos: 8
+
+Movimientos: ['Up', 'Left', 'Down', 'Right', 'Up', 'Left', 'Down', 'Right']
+
+
+Estado meta:
+[1, 2]
+[3, 0]
+
+Estado inicial (solucionable):
+[1, 2]
+[3, 0]
+
+=== A* (Distancia Manhattan) ===
+Tiempo: 0.000040 s
+Nodos expandidos: 0
+
+Movimientos:  []
+
+=== A* (Piezas mal colocadas) ===
+Tiempo: 0.000040 s
+Nodos expandidos: 0
+
+Movimientos:  []
+
+=== BFS ===
+Tiempo: 0.000005 s
+Nodos expandidos: 0
+
+Movimientos: 0
+
+=== DFS ===
+Tiempo: 0.000003 s
+Nodos expandidos: 0
+
+Movimientos: []
+
+
+Estado meta:
+[1, 2]
+[3, 0]
+
+Estado inicial (solucionable):
+[1, 2]
+[3, 0]
+
+=== A* (Distancia Manhattan) ===
+Tiempo: 0.000053 s
+Nodos expandidos: 0
+
+Movimientos:  []
+
+=== A* (Piezas mal colocadas) ===
+Tiempo: 0.000053 s
+Nodos expandidos: 0
+
+Movimientos:  []
+
+=== BFS ===
+Tiempo: 0.000005 s
+Nodos expandidos: 0
+
+Movimientos: 0
+
+=== DFS ===
+Tiempo: 0.000003 s
+Nodos expandidos: 0
+
+Movimientos: []
+
+
+Estado meta:
+[1, 2]
+[3, 0]
+
+Estado inicial (solucionable):
+[1, 2]
+[3, 0]
+
+=== A* (Distancia Manhattan) ===
+Tiempo: 0.000045 s
+Nodos expandidos: 0
+
+Movimientos:  []
+
+=== A* (Piezas mal colocadas) ===
+Tiempo: 0.000045 s
+Nodos expandidos: 0
+
+Movimientos:  []
+
+=== BFS ===
+Tiempo: 0.000003 s
+Nodos expandidos: 0
+
+Movimientos: 0
+
+=== DFS ===
+Tiempo: 0.000003 s
+Nodos expandidos: 0
+
+Movimientos: []
+
+
+Estado meta:
+[1, 2]
+[3, 0]
+
+Estado inicial (solucionable):
+[2, 3]
+[1, 0]
+
+=== A* (Distancia Manhattan) ===
+Tiempo: 0.000166 s
+Nodos expandidos: 5
+
+Movimientos:  ['Up', 'Left', 'Down', 'Right']
+
+=== A* (Piezas mal colocadas) ===
+Tiempo: 0.000166 s
+Nodos expandidos: 6
+
+Movimientos:  ['Up', 'Left', 'Down', 'Right']
+
+=== BFS ===
+Tiempo: 0.000101 s
+Nodos expandidos: 8
+
+Movimientos: ['Up', 'Left', 'Down', 'Right']
+
+=== DFS ===
+Tiempo: 0.000061 s
+Nodos expandidos: 4
+
+Movimientos: ['Up', 'Left', 'Down', 'Right']
+
+
+Estado meta:
+[1, 2]
+[3, 0]
+
+Estado inicial (solucionable):
+[2, 3]
+[1, 0]
+
+=== A* (Distancia Manhattan) ===
+Tiempo: 0.000294 s
+Nodos expandidos: 5
+
+Movimientos:  ['Up', 'Left', 'Down', 'Right']
+
+=== A* (Piezas mal colocadas) ===
+Tiempo: 0.000294 s
+Nodos expandidos: 6
+
+Movimientos:  ['Up', 'Left', 'Down', 'Right']
+
+=== BFS ===
+Tiempo: 0.000121 s
+Nodos expandidos: 8
+
+Movimientos: ['Up', 'Left', 'Down', 'Right']
+
+=== DFS ===
+Tiempo: 0.000077 s
+Nodos expandidos: 4
+
+Movimientos: ['Up', 'Left', 'Down', 'Right']
+
+
+Estado meta:
+[1, 2, 3]
+[4, 5, 6]
+[7, 8, 0]
+
+Estado inicial (solucionable):
+[4, 7, 2]
+[1, 6, 3]
+[8, 5, 0]
+
+=== A* (Distancia Manhattan) ===
+Tiempo: 0.006639 s
+Nodos expandidos: 223
+
+Movimientos:  ['Left', 'Up', 'Up', 'Left', 'Down', 'Right', 'Up', 'Right', 'Down', 'Down', 'Left', 'Left', 'Up', 'Right', 'Right', 'Down']
+
+=== A* (Piezas mal colocadas) ===
+Tiempo: 0.006639 s
+Nodos expandidos: 542
+
+Movimientos:  ['Left', 'Up', 'Up', 'Left', 'Down', 'Right', 'Up', 'Right', 'Down', 'Down', 'Left', 'Left', 'Up', 'Right', 'Right', 'Down']
+
+=== BFS ===
+Tiempo: 0.074646 s
+Nodos expandidos: 9230
+
+Movimientos: ['Left', 'Up', 'Up', 'Left', 'Down', 'Right', 'Up', 'Right', 'Down', 'Down', 'Left', 'Left', 'Up', 'Right', 'Right', 'Down']
+
+=== DFS ===
+Tiempo: 0.235524 s
+Nodos expandidos: 31575
+
+Movimientos: No se puede encontrar la solución con una profundidad limitada
+
+
+Estado meta:
+[1, 2, 3]
+[4, 5, 6]
+[7, 8, 0]
+
+Estado inicial (solucionable):
+[1, 2, 7]
+[8, 4, 3]
+[6, 5, 0]
+
+=== A* (Distancia Manhattan) ===
+Tiempo: 0.014032 s
+Nodos expandidos: 508
+
+Movimientos:  ['Left', 'Left', 'Up', 'Up', 'Right', 'Right', 'Down', 'Down', 'Left', 'Up', 'Up', 'Left', 'Down', 'Right', 'Down', 'Left', 'Up', 'Right', 'Right', 'Down']
+
+=== A* (Piezas mal colocadas) ===
+Tiempo: 0.014032 s
+Nodos expandidos: 3187
+
+Movimientos:  ['Left', 'Left', 'Up', 'Up', 'Right', 'Right', 'Down', 'Left', 'Up', 'Left', 'Down', 'Right', 'Right', 'Down', 'Left', 'Left', 'Up', 'Right', 'Right', 'Down']
+
+=== BFS ===
+Tiempo: 0.347140 s
+Nodos expandidos: 40593
+
+Movimientos: ['Left', 'Left', 'Up', 'Up', 'Right', 'Right', 'Down', 'Left', 'Up', 'Left', 'Down', 'Right', 'Right', 'Down', 'Left', 'Left', 'Up', 'Right', 'Right', 'Down']
+
+=== DFS ===
+Tiempo: 0.235866 s
+Nodos expandidos: 31575
+
+Movimientos: No se puede encontrar la solución con una profundidad limitada
+
+
+Estado meta:
+[1, 2, 3]
+[4, 5, 6]
+[7, 8, 0]
+
+Estado inicial (solucionable):
+[2, 7, 1]
+[5, 8, 6]
+[4, 3, 0]
+
+=== A* (Distancia Manhattan) ===
+Tiempo: 0.050882 s
+Nodos expandidos: 1827
+
+Movimientos:  ['Left', 'Up', 'Right', 'Down', 'Left', 'Left', 'Up', 'Up', 'Right', 'Right', 'Down', 'Left', 'Left', 'Up', 'Right', 'Down', 'Down', 'Left', 'Up', 'Right', 'Down', 'Right']
+
+=== A* (Piezas mal colocadas) ===
+Tiempo: 0.050882 s
+Nodos expandidos: 7840
+
+Movimientos:  ['Left', 'Up', 'Right', 'Down', 'Left', 'Left', 'Up', 'Up', 'Right', 'Right', 'Down', 'Left', 'Left', 'Up', 'Right', 'Down', 'Down', 'Left', 'Up', 'Right', 'Down', 'Right']
+
+=== BFS ===
+Tiempo: 0.754595 s
+Nodos expandidos: 83024
+
+Movimientos: ['Left', 'Up', 'Right', 'Down', 'Left', 'Left', 'Up', 'Up', 'Right', 'Right', 'Down', 'Left', 'Left', 'Up', 'Right', 'Down', 'Down', 'Left', 'Up', 'Right', 'Down', 'Right']
+
+=== DFS ===
+Tiempo: 0.242611 s
+Nodos expandidos: 31575
+
+Movimientos: No se puede encontrar la solución con una profundidad limitada
+
+
+Estado meta:
+[1, 2, 3]
+[4, 5, 6]
+[7, 8, 0]
+
+Estado inicial (solucionable):
+[3, 6, 1]
+[8, 7, 2]
+[5, 4, 0]
+
+=== A* (Distancia Manhattan) ===
+Tiempo: 0.149319 s
+Nodos expandidos: 5440
+
+Movimientos:  ['Up', 'Left', 'Left', 'Down', 'Right', 'Up', 'Right', 'Down', 'Left', 'Up', 'Up', 'Right', 'Down', 'Left', 'Left', 'Up', 'Right', 'Down', 'Left', 'Down', 'Right', 'Right', 'Up', 'Left', 'Up', 'Right', 'Down', 'Down']
+
+=== A* (Piezas mal colocadas) ===
+Tiempo: 0.149319 s
+Nodos expandidos: 72459
+
+Movimientos:  ['Up', 'Left', 'Left', 'Down', 'Right', 'Up', 'Right', 'Down', 'Left', 'Up', 'Up', 'Right', 'Down', 'Left', 'Left', 'Up', 'Right', 'Down', 'Left', 'Down', 'Right', 'Right', 'Up', 'Left', 'Up', 'Right', 'Down', 'Down']
+
+=== BFS ===
+Tiempo: 2.072283 s
+Nodos expandidos: 176566
+
+Movimientos: ['Left', 'Left', 'Up', 'Right', 'Right', 'Up', 'Left', 'Left', 'Down', 'Right', 'Right', 'Up', 'Left', 'Down', 'Left', 'Up', 'Right', 'Down', 'Down', 'Right', 'Up', 'Left', 'Down', 'Left', 'Up', 'Right', 'Right', 'Down']
+
+=== DFS ===
+Tiempo: 0.238118 s
+Nodos expandidos: 31575
+
+Movimientos: No se puede encontrar la solución con una profundidad limitada
+
+
+Estado meta:
+[1, 2, 3]
+[4, 5, 6]
+[7, 8, 0]
+
+Estado inicial (solucionable):
+[6, 7, 1]
+[8, 4, 3]
+[5, 2, 0]
+
+=== A* (Distancia Manhattan) ===
+Tiempo: 0.014974 s
+Nodos expandidos: 547
+
+Movimientos:  ['Left', 'Left', 'Up', 'Right', 'Up', 'Left', 'Down', 'Right', 'Up', 'Right', 'Down', 'Left', 'Down', 'Right', 'Up', 'Left', 'Down', 'Left', 'Up', 'Up', 'Right', 'Down', 'Right', 'Down']
+
+=== A* (Piezas mal colocadas) ===
+Tiempo: 0.014974 s
+Nodos expandidos: 17399
+
+Movimientos:  ['Left', 'Left', 'Up', 'Right', 'Up', 'Left', 'Down', 'Right', 'Up', 'Right', 'Down', 'Left', 'Down', 'Right', 'Up', 'Left', 'Down', 'Left', 'Up', 'Up', 'Right', 'Down', 'Right', 'Down']
+
+=== BFS ===
+Tiempo: 1.178761 s
+Nodos expandidos: 118673
+
+Movimientos: ['Left', 'Left', 'Up', 'Right', 'Up', 'Left', 'Down', 'Right', 'Up', 'Right', 'Down', 'Left', 'Down', 'Right', 'Up', 'Left', 'Down', 'Left', 'Up', 'Up', 'Right', 'Down', 'Right', 'Down']
+
+=== DFS ===
+Tiempo: 0.239058 s
+Nodos expandidos: 31575
+
+Movimientos: No se puede encontrar la solución con una profundidad limitada
+
+
+Estado meta:
+[1, 2, 3]
+[4, 5, 6]
+[7, 8, 0]
+
+Estado inicial (solucionable):
+[2, 6, 1]
+[7, 3, 5]
+[8, 4, 0]
+
+=== A* (Distancia Manhattan) ===
+Tiempo: 0.024618 s
+Nodos expandidos: 896
+
+Movimientos:  ['Up', 'Up', 'Left', 'Down', 'Right', 'Down', 'Left', 'Left', 'Up', 'Right', 'Right', 'Down', 'Left', 'Up', 'Right', 'Up', 'Left', 'Left', 'Down', 'Right', 'Down', 'Right']
+
+=== A* (Piezas mal colocadas) ===
+Tiempo: 0.024618 s
+Nodos expandidos: 8276
+
+Movimientos:  ['Up', 'Up', 'Left', 'Down', 'Right', 'Down', 'Left', 'Left', 'Up', 'Right', 'Right', 'Down', 'Left', 'Up', 'Right', 'Up', 'Left', 'Left', 'Down', 'Right', 'Down', 'Right']
+
+=== BFS ===
+Tiempo: 0.855783 s
+Nodos expandidos: 94895
+
+Movimientos: ['Up', 'Up', 'Left', 'Down', 'Right', 'Down', 'Left', 'Left', 'Up', 'Right', 'Right', 'Down', 'Left', 'Up', 'Right', 'Up', 'Left', 'Left', 'Down', 'Right', 'Down', 'Right']
+
+=== DFS ===
+Tiempo: 0.241921 s
+Nodos expandidos: 31575
+
+Movimientos: No se puede encontrar la solución con una profundidad limitada
+
+
+Estado meta:
+[1, 2, 3]
+[4, 5, 6]
+[7, 8, 0]
+
+Estado inicial (solucionable):
+[4, 3, 6]
+[1, 2, 7]
+[8, 5, 0]
+
+=== A* (Distancia Manhattan) ===
+Tiempo: 0.031993 s
+Nodos expandidos: 1179
+
+Movimientos:  ['Left', 'Left', 'Up', 'Right', 'Right', 'Down', 'Left', 'Up', 'Right', 'Up', 'Left', 'Left', 'Down', 'Down', 'Right', 'Up', 'Up', 'Left', 'Down', 'Right', 'Down', 'Right']
+
+=== A* (Piezas mal colocadas) ===
+Tiempo: 0.031993 s
+Nodos expandidos: 8579
+
+Movimientos:  ['Left', 'Left', 'Up', 'Right', 'Right', 'Down', 'Left', 'Up', 'Right', 'Up', 'Left', 'Left', 'Down', 'Down', 'Right', 'Up', 'Up', 'Left', 'Down', 'Right', 'Down', 'Right']
+
+=== BFS ===
+Tiempo: 0.687953 s
+Nodos expandidos: 73322
+
+Movimientos: ['Left', 'Left', 'Up', 'Right', 'Right', 'Down', 'Left', 'Up', 'Right', 'Up', 'Left', 'Left', 'Down', 'Down', 'Right', 'Up', 'Up', 'Left', 'Down', 'Right', 'Down', 'Right']
+
+=== DFS ===
+Tiempo: 0.236732 s
+Nodos expandidos: 31575
+
+Movimientos: No se puede encontrar la solución con una profundidad limitada
+
+
+Estado meta:
+[1, 2, 3]
+[4, 5, 6]
+[7, 8, 0]
+
+Estado inicial (solucionable):
+[3, 4, 6]
+[1, 8, 5]
+[7, 2, 0]
+
+=== A* (Distancia Manhattan) ===
+Tiempo: 0.001744 s
+Nodos expandidos: 57
+
+Movimientos:  ['Up', 'Left', 'Up', 'Left', 'Down', 'Right', 'Down', 'Right', 'Up', 'Up', 'Left', 'Down', 'Down', 'Right']
+
+=== A* (Piezas mal colocadas) ===
+Tiempo: 0.001744 s
+Nodos expandidos: 213
+
+Movimientos:  ['Up', 'Left', 'Up', 'Left', 'Down', 'Right', 'Down', 'Right', 'Up', 'Up', 'Left', 'Down', 'Down', 'Right']
+
+=== BFS ===
+Tiempo: 0.030551 s
+Nodos expandidos: 4137
+
+Movimientos: ['Up', 'Left', 'Up', 'Left', 'Down', 'Right', 'Down', 'Right', 'Up', 'Up', 'Left', 'Down', 'Down', 'Right']
+
+=== DFS ===
+Tiempo: 0.084418 s
+Nodos expandidos: 11275
+
+Movimientos: ['Up', 'Up', 'Left', 'Down', 'Down', 'Right', 'Up', 'Up', 'Left', 'Left', 'Down', 'Down', 'Right', 'Right', 'Up', 'Up', 'Left', 'Down', 'Down', 'Right', 'Up', 'Left', 'Down', 'Left', 'Up', 'Right', 'Down', 'Right']
+
+
+Estado meta:
+[1, 2, 3]
+[4, 5, 6]
+[7, 8, 0]
+
+Estado inicial (solucionable):
+[8, 2, 5]
+[3, 6, 1]
+[4, 7, 0]
+
+=== A* (Distancia Manhattan) ===
+Tiempo: 0.056304 s
+Nodos expandidos: 2086
+
+Movimientos:  ['Left', 'Up', 'Left', 'Up', 'Right', 'Down', 'Right', 'Down', 'Left', 'Left', 'Up', 'Right', 'Right', 'Up', 'Left', 'Left', 'Down', 'Right', 'Down', 'Left', 'Up', 'Right', 'Right', 'Down']
+
+=== A* (Piezas mal colocadas) ===
+Tiempo: 0.056304 s
+Nodos expandidos: 17779
+
+Movimientos:  ['Left', 'Up', 'Left', 'Up', 'Right', 'Down', 'Right', 'Down', 'Left', 'Left', 'Up', 'Right', 'Right', 'Up', 'Left', 'Left', 'Down', 'Right', 'Down', 'Left', 'Up', 'Right', 'Right', 'Down']
+
+=== BFS ===
+Tiempo: 1.222754 s
+Nodos expandidos: 124779
+
+Movimientos: ['Left', 'Up', 'Left', 'Up', 'Right', 'Down', 'Right', 'Down', 'Left', 'Left', 'Up', 'Right', 'Right', 'Up', 'Left', 'Left', 'Down', 'Right', 'Down', 'Left', 'Up', 'Right', 'Right', 'Down']
+
+=== DFS ===
+Tiempo: 0.238686 s
+Nodos expandidos: 31575
+
+Movimientos: No se puede encontrar la solución con una profundidad limitada
+
+
+Estado meta:
+[1, 2, 3]
+[4, 5, 6]
+[7, 8, 0]
+
+Estado inicial (solucionable):
+[6, 5, 3]
+[7, 8, 2]
+[1, 4, 0]
+
+=== A* (Distancia Manhattan) ===
+Tiempo: 0.071013 s
+Nodos expandidos: 2455
+
+Movimientos:  ['Up', 'Left', 'Left', 'Down', 'Right', 'Up', 'Up', 'Left', 'Down', 'Down', 'Right', 'Right', 'Up', 'Left', 'Up', 'Right', 'Down', 'Left', 'Down', 'Right', 'Up', 'Up', 'Left', 'Down', 'Right', 'Down']
+
+=== A* (Piezas mal colocadas) ===
+Tiempo: 0.071013 s
+Nodos expandidos: 39098
+
+Movimientos:  ['Up', 'Left', 'Left', 'Down', 'Right', 'Up', 'Up', 'Left', 'Down', 'Down', 'Right', 'Right', 'Up', 'Left', 'Up', 'Right', 'Down', 'Left', 'Down', 'Right', 'Up', 'Up', 'Left', 'Down', 'Right', 'Down']
+
+=== BFS ===
+Tiempo: 1.844527 s
+Nodos expandidos: 167456
+
+Movimientos: ['Up', 'Left', 'Left', 'Down', 'Right', 'Up', 'Left', 'Up', 'Right', 'Down', 'Left', 'Down', 'Right', 'Right', 'Up', 'Left', 'Down', 'Left', 'Up', 'Up', 'Right', 'Down', 'Left', 'Down', 'Right', 'Right']
+
+=== DFS ===
+Tiempo: 0.241364 s
+Nodos expandidos: 31575
+
+Movimientos: No se puede encontrar la solución con una profundidad limitada
+
+
+Estado meta:
+[1, 2, 3]
+[4, 5, 6]
+[7, 8, 0]
+
+Estado inicial (solucionable):
+[5, 1, 7]
+[3, 2, 8]
+[6, 4, 0]
+
+=== A* (Distancia Manhattan) ===
+Tiempo: 0.056557 s
+Nodos expandidos: 2061
+
+Movimientos:  ['Up', 'Left', 'Left', 'Up', 'Right', 'Right', 'Down', 'Left', 'Up', 'Left', 'Down', 'Down', 'Right', 'Up', 'Left', 'Up', 'Right', 'Right', 'Down', 'Left', 'Left', 'Down', 'Right', 'Right']
+
+=== A* (Piezas mal colocadas) ===
+Tiempo: 0.056557 s
+Nodos expandidos: 17320
+
+Movimientos:  ['Up', 'Left', 'Left', 'Up', 'Right', 'Right', 'Down', 'Left', 'Up', 'Left', 'Down', 'Down', 'Right', 'Up', 'Left', 'Up', 'Right', 'Right', 'Down', 'Left', 'Left', 'Down', 'Right', 'Right']
+
+=== BFS ===
+Tiempo: 1.360995 s
+Nodos expandidos: 131985
+
+Movimientos: ['Up', 'Left', 'Left', 'Up', 'Right', 'Right', 'Down', 'Left', 'Up', 'Left', 'Down', 'Down', 'Right', 'Up', 'Left', 'Up', 'Right', 'Right', 'Down', 'Left', 'Left', 'Down', 'Right', 'Right']
+
+=== DFS ===
+Tiempo: 0.239481 s
+Nodos expandidos: 31575
+
+Movimientos: No se puede encontrar la solución con una profundidad limitada
+
+
+Estado meta:
+[1, 2, 3]
+[4, 5, 6]
+[7, 8, 0]
+
+Estado inicial (solucionable):
+[3, 5, 4]
+[8, 2, 7]
+[1, 6, 0]
+
+=== A* (Distancia Manhattan) ===
+Tiempo: 0.036762 s
+Nodos expandidos: 1352
+
+Movimientos:  ['Left', 'Left', 'Up', 'Right', 'Right', 'Up', 'Left', 'Left', 'Down', 'Right', 'Down', 'Left', 'Up', 'Right', 'Right', 'Up', 'Left', 'Left', 'Down', 'Right', 'Right', 'Down']
+
+=== A* (Piezas mal colocadas) ===
+Tiempo: 0.036762 s
+Nodos expandidos: 7314
+
+Movimientos:  ['Left', 'Left', 'Up', 'Right', 'Right', 'Up', 'Left', 'Left', 'Down', 'Right', 'Down', 'Left', 'Up', 'Right', 'Right', 'Up', 'Left', 'Left', 'Down', 'Right', 'Right', 'Down']
+
+=== BFS ===
+Tiempo: 0.675490 s
+Nodos expandidos: 72131
+
+Movimientos: ['Left', 'Left', 'Up', 'Right', 'Right', 'Up', 'Left', 'Left', 'Down', 'Right', 'Down', 'Left', 'Up', 'Right', 'Right', 'Up', 'Left', 'Left', 'Down', 'Right', 'Right', 'Down']
+
+=== DFS ===
+Tiempo: 0.240796 s
+Nodos expandidos: 31575
+
+Movimientos: No se puede encontrar la solución con una profundidad limitada
+
+

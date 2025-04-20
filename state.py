@@ -18,7 +18,6 @@ class State:
             self.cost = cost
 
         n = int(len(state) ** 0.5)  # Calcular n a partir del estado
-
         # Generar el goal si no existe o si tiene un tamaño diferente al actual
         if State.goal is None or len(State.goal) != len(state):
             State.goal = self.generate_goal_state(n)
